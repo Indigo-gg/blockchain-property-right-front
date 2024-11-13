@@ -1,0 +1,757 @@
+/*global.less 用于更改ant-design-vue组件的样式*/
+
+@import '~ant-design-vue/es/style/themes/default.less';
+
+html,
+body,
+#app, #root {
+  height: 100%;
+  color: #FFF
+}
+
+
+@primary-color: #a5c3d9;
+
+//统一修改网站内的按钮样式
+.ant-btn {
+  font-weight: bold;
+  background-color: rgba(192, 220, 246, 0.2);
+  color: #a5c3d9;
+
+  &.ant-btn-primary {
+    background-color: rgba(192, 220, 246, 0.2);
+    color: #a5c3d9;
+
+    &:hover {
+      background-color: rgba(192, 220, 246, 0.3);
+    }
+  }
+
+  &.ant-btn-danger {
+    background-color: rgba(190, 212, 232, 0.2);
+    color: #c04b4b;
+
+    &:hover {
+      background-color: rgba(192, 220, 246, 0.3);
+    }
+  }
+}
+
+.ant-btn:hover {
+  background-color: rgba(192, 220, 246, 0.3);
+}
+
+
+//统一修改弹窗
+.ant-modal-content {
+  background-color: rgba(232, 232, 232, 1);
+  color: #2d2c2c;
+}
+
+
+::-webkit-scrollbar {
+  /*隐藏滚轮*/
+  display: none;
+}
+
+.colorWeak {
+  filter: invert(80%);
+}
+
+.ant-layout.layout-basic {
+  height: 100vh;
+  min-height: 100vh;
+}
+
+canvas {
+  display: block;
+}
+
+body {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+// 数据列表 样式
+.table-alert {
+  margin-bottom: 16px;
+}
+
+// 数据列表 操作
+.table-operator {
+  margin-bottom: 18px;
+
+  button {
+    margin-right: 8px;
+  }
+}
+
+// 数据列表 搜索条件
+.table-page-search-wrapper {
+
+  .ant-form-inline {
+    .ant-form-item {
+      display: flex;
+      margin-bottom: 24px;
+      margin-right: 0;
+
+      .ant-form-item-control-wrapper {
+        flex: 1 1;
+        display: inline-block;
+        vertical-align: middle;
+      }
+
+      > .ant-form-item-label {
+        line-height: 32px;
+        padding-right: 8px;
+        width: auto;
+      }
+
+      .ant-form-item-control {
+        height: 32px;
+        line-height: 32px;
+      }
+    }
+  }
+
+  .table-page-search-submitButtons {
+    display: block;
+    margin-bottom: 24px;
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: @screen-xs) {
+  .ant-table {
+    width: 100%;
+    overflow-x: auto;
+
+    &-thead > tr,
+    &-tbody > tr {
+      > th,
+      > td {
+        white-space: pre;
+
+        > span {
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+//fixed antd card shadow
+.shadow {
+  box-shadow: 0 1px 6px rgba(0, 0, 0, .2);
+  border-color: #eee;
+}
+
+.mt-5 {
+  margin-top: 5px;
+}
+
+.mt-10 {
+  margin-top: 10px;
+}
+
+.ml-5 {
+  margin-left: 5px;
+}
+
+.ml-10 {
+  margin-left: 10px;
+}
+
+.ml-15 {
+  margin-left: 15px;
+}
+
+.line {
+  white-space: pre-line
+}
+
+.editable {
+  /deep/ .ant-select-selection {
+    background-color: inherit;
+    border: 0;
+  }
+}
+
+.ant-layout-footer {
+  padding: 0;
+}
+
+//去除默认边框
+.ant-modal-body {
+  padding: 0;
+}
+
+//透明弹出框
+
+.transparent {
+  .ant-modal-content {
+    background-color: transparent;
+  }
+
+}
+
+
+//修正表格尺寸
+
+.ant-table-thead > tr > th {
+  padding: 10px 5px;
+}
+
+.ant-table-tbody > tr > td {
+  padding: 8px 5px;
+}
+
+.ant-divider, .ant-divider-vertical {
+  margin: 0 4px;
+}
+
+//修改ant-list-item
+.ant-list-grid .ant-col > .ant-list-item {
+  margin-bottom: 0;
+}
+
+//修改pagination的样式
+.ant-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+//修改时间线的结点背景颜色
+.ant-timeline-item-head {
+  background-color: transparent !important;
+}
+
+
+//相关背景色
+.bg-success {
+  background-color: #dff0d8;
+}
+
+.bg-warning {
+  background-color: #fcf8e3;
+}
+
+.bg-danger {
+  background-color: #f2dede;
+}
+
+.bg-info {
+  background-color: #d9edf7;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.gray {
+  color: #C6C6C6;
+}
+
+.red {
+  color: red;
+}
+
+
+.full-width {
+  width: 100% !important;
+}
+
+.my-flex-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-row-space-around {
+  display: flex;
+  //flex-direction: ;
+  justify-content: space-around;
+  align-items: center;
+}
+
+
+.login-form {
+  //输入框统一更改样式
+  //ant form的外包框
+  .ant-form-item-control {
+    .has-error .ant-input,
+    .ant-input {
+      color: #FFFFFF;
+      position: relative;
+      z-index: 99;
+      background-color: rgba(255, 255, 255, 0);
+      border-radius: 6px;
+
+      &:focus {
+        border-color: #d0effa;
+      }
+
+      &::placeholder {
+        color: #c2c1c1;
+      }
+    }
+  }
+
+
+}
+
+
+/*收藏夹弹出层样式修改*/
+.collect-edit-modal {
+  .ant-modal-content,
+  .ant-modal-body {
+    padding: 0;
+    background: transparent;
+  }
+}
+
+
+//分页器样式修改
+//修改pagination的样式
+
+
+//分页器的按钮颜色
+.ant-pagination-item {
+  background: transparent;
+  border-radius: 3px;
+  color: #a9a3a3;
+  border: aliceblue 1px solid;
+
+  &.ant-pagination-item-active {
+    color: #a9a3a3;
+  }
+
+  & a {
+    color: #a9a3a3;
+  }
+}
+
+.ant-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  //background: #000000;
+  .ant-pagination-item-link {
+    background: transparent;
+    border-radius: 3px;
+    color: #c2bfbf;
+    border: aliceblue 1px solid;
+  }
+}
+
+//分页器
+//.ant-pagination-prev{
+//  //background: transparent;
+//  background: #000000;
+//  border-radius: 3px;
+//  color: #a9a3a3;
+//}
+
+/*个人中心和权益中心的表单样式改变*/
+.artwork-form, .protect-form, .report-form, .artwork-market {
+  .form-edit {
+    background: transparent;
+  }
+
+  .ant-form-item {
+    margin-bottom: 0;
+  }
+
+  textarea {
+    border: none;
+    outline-color: #2d2c2c;
+
+    &:focus {
+      border: #2d2c2c;
+    }
+  }
+
+  .ant-upload,
+  .ant-input,
+  .ant-select-selection {
+    background: transparent;
+    border-radius: 3px;
+    color: #a9a3a3;
+
+    &::placeholder {
+      color: #a9a3a3;
+    }
+
+    .ant-select-arrow-icon {
+      color: #a9a3a3;
+    }
+  }
+
+  .ant-select-item {
+    background: transparent;
+    border-radius: 3px;
+    color: #a9a3a3;
+
+  }
+
+  .ant-select-selection__placeholder {
+    color: #FFFFFF;
+  }
+}
+
+//商城页属性更改
+.artwork-market {
+  .ant-select-selection {
+    background: transparent;
+    border-radius: 10px;
+    color: #a9a3a3;
+
+    &::placeholder {
+      color: #a9a3a3;
+    }
+
+    .ant-select-arrow-icon {
+      color: #a9a3a3;
+    }
+  }
+
+  .ant-select-item {
+    background: transparent;
+    border-radius: 3px;
+    color: #a9a3a3;
+
+  }
+
+
+  .ant-select-selection__placeholder {
+    color: #FFFFFF;
+  }
+}
+
+//表格提交按钮
+.form-submit {
+  .ant-btn {
+    display: flex;
+    align-items: center;
+    padding: 0.5em 2em;
+    line-height: 2em;
+    border-radius: 2em;
+    letter-spacing: 1px;
+  }
+}
+
+//抽屉弹出样式
+.ant-drawer-content {
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+/*藏品维权信息页面组件样式修改*/
+.relate-artwork-info {
+  .img-spin {
+    .ant-spin-dot-item {
+      background-color: #1a1717;
+    }
+
+    .ant-spin-text {
+      color: #1a1717;
+    }
+  }
+
+}
+
+//文字溢出样式
+.text-overflow-8 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 8;
+  -webkit-box-orient: vertical;
+}
+
+.text-overflow-5 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+}
+
+.text-overflow-3 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+
+.text-overflow-2 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.text-overflow-1 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+
+
+//卡片盒子背景色
+
+.card-box-bgColor {
+  background: rgba(197, 213, 218, 0.1);
+}
+
+
+.ant-dropdown-menu-item {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+//登录与认证的表单样式重写
+.identify-form-page {
+  .ant-input,
+  .ant-input:focus {
+    border: none;
+    outline: none;
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+  }
+}
+
+//毛玻璃透镜
+.glass-morphism {
+  background: rgba(81, 81, 81, 0.15);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.2);
+  backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(3px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 5px;
+
+}
+
+//用户个人中心页面统一背景色
+.personal-center-page, .right-protect-center-page {
+  background-image: linear-gradient(to right bottom, #0f181e, #0d1b26, #0b1d2e, #0e1f37, #14203e, #162041, #191f43, #1c1e45, #181c44, #131b44, #0d1943, #061842);
+  background-image: url("http://blockchain.maplesky.cn/StaticResource/PersonalCenter/stary-main.png");
+  background-size: 100% 100%;
+  min-height: 100vh;
+  padding-bottom: 10vh;
+  position: relative;
+  z-index: 1;
+  //tab栏颜色调整
+  .ant-tabs-tab {
+    color: #FFFFFF;
+
+    &.ant-tabs-tab-active {
+      color: #2d8cf0;
+    }
+  }
+
+  .ant-select-selection, .ant-input {
+    background: transparent;
+    color: #e5e7e8;
+  }
+
+  .ant-input-suffix, .ant-select-arrow {
+    color: #4a92be;
+  }
+
+  .ant-select-selection,
+  .ant-select-selection--single,
+  .ant-select-selection__placeholder {
+    color: #e5e7e8;
+    letter-spacing: 2px;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    //background: rgba(148, 148, 148, 0.1);
+    backdrop-filter: blur();
+    -webkit-backdrop-filter: blur(1px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+  }
+
+  .personal-center-page-container, .right-protect-center-container {
+    position: relative;
+    z-index: 3;
+  }
+
+  //筛选区域
+  .filter-area {
+    margin: 10px auto;
+  }
+
+  //列表内容布局
+  .list-content-area {
+    min-height: 40vh;
+    position: relative;
+
+    .list-empty {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}
+
+
+//个人中心列表样式
+.personal-center-list-wrapper {
+  width: 90%;
+  color: #FFFFFF;
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  border-radius: 5px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  padding: 5px;
+  margin: 10px auto;
+  cursor: pointer;
+  transition: all .2s ease;
+  position: relative;
+  z-index: 4;
+
+  &:hover {
+    backdrop-filter: blur(0);
+    -webkit-backdrop-filter: blur(0);
+    //background-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-5px);
+  }
+
+  .personal-center-list-item {
+    position: relative;
+    z-index: 5;
+  }
+}
+
+
+.OwnershipBuy {
+  .ant-select-selection-selected-value {
+    width: 100% !important;
+  }
+}
+
+//商城页轮播图尺寸设置
+.artwork-market {
+  .ant-carousel .slick-slide {
+    width: 100vw;
+    height: 55vh;
+    background: #364d79;
+    overflow: hidden;
+  }
+}
+
+
+.flex-col-start {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.flex-col-space-between {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flex-col-space-around {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+
+.flex-col-space-around-reverse {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.flex-row-start {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.flex-row-end {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.flex-row-space-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flex-row-space-around {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.pub-rule-content {
+  height: 200px;
+  background: #8f87e4;
+}
+
+/**/
+.withDrawSteps {
+
+  //进行中的步骤
+  .ant-steps-item-process {
+
+  }
+  //已完成的步骤
+  .ant-steps-item-finish {
+
+  }
+  //等待中的步骤
+  .ant-steps-item-wait {
+
+  }
+}
+
+
+/*进度条*/
+.ant-progress-text{
+  color:#e0e5ec;
+}
+
+
+
